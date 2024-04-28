@@ -1,0 +1,297 @@
+/*------------fuentes-----------------------*/
+body{
+    font-family: sans-serif;     
+    background-color: azure; 
+    position: relative; 
+    padding: 0%;  
+    margin: 0;    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    /*---------------------------HEADER Y NAV BAR-----------------------*/
+    header{        
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    background-color: white;
+    padding: 1.5rem;
+    gap: 3rem;            
+    }
+    header img{           
+        width: 8em;
+        height: auto;        
+    }
+    header h2{               
+        color: red;         
+    }   
+    .iconoQuienesSomos{
+        display: flex;          
+        flex-direction: column;
+        align-items: center;       
+    }    
+    .iconoQuienesSomos img{
+        width: 5rem;
+        height: auto;
+        border-radius: 50%;
+    }          
+    .quienesSomos{
+        border: none;
+        background-color: transparent;
+        text-decoration: underline;        
+        font-weight: bolder;
+        font-size: 1rem;       
+    }
+    .iconoQuienesSomos:hover{
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+    .quienesSomos img{
+        object-fit: cover;
+    }     
+    .listNav{
+        display: flex;           
+        list-style-type: none;
+        gap: 5rem;  
+        align-items: center;         
+    }
+    .listNav a{
+        text-decoration: none;
+        color: red;    
+        font-size: 1.5rem;
+    }
+    .listNav a:hover{     
+     color: blueviolet; 
+     font-size: 1.7rem;    
+    }          
+    .cerrar-menu{           
+        display: none;        
+        background-color: red; 
+       border: none;
+       font-size: 1.5rem;                              
+    }
+    .abrir-menu{
+     display: none;  
+     border: none;     
+     font-size: 2.5rem;
+     background-color: white;
+     color: red;     
+    }  
+    /*--------------------------FIN HEADER Y NAV BAR------------------------*/
+
+    /*--------------------------CONTENEDOR PRINCIPAL----------------------- */
+    .contenedorPrincipal{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        margin-top: 2em;
+    }
+    /*-----------------------FIN CONTENEDOR PRINCIPAL---------------------- */
+
+    /*--------------------------CUADRICULA---------------------------------*/
+        .containerCuadricula{
+            display: flex;
+            justify-content: center;                                             
+             
+        }
+        .containerCuadricula ul{      
+        display: grid;        
+        grid-template-columns: 15em 15em 15em 15em;       
+        list-style-type: none;
+        column-gap: 2em;
+        row-gap: 1em; 
+        margin-bottom: 2em;      
+        }       
+        .tarjeta{
+            display: flex;
+            flex-direction: column;
+            border-radius: 0.5em;
+            border: 2px solid darkgray;
+            overflow: hidden; 
+            box-shadow: 5px 5px 2px 2px rgba(0, 0, 0, .5);          
+        }    
+        .tarjeta:hover{
+            box-shadow: 6px 5px 5px 5px rgba(0, 0, 0, .5); 
+            border-color: red;
+        }
+        .contImagenProducto{
+            display: flex;
+            justify-content: center;           
+            padding: 0.5em;
+            background-color: white;            
+            height: 15em; 
+                                 
+        }
+        .contImagenProducto img{            
+            width: 100%; /* Ocupa todo el ancho de la celda */
+            height: 100%;/* Ocupa el 60% de la altura de la celda */
+            object-fit: cover; /* Ajusta la imagen para cubrir la celda */
+             
+        }
+        .contSubtitulos { 
+            background-color: grey;           
+            padding: 0.5em 0.5em;            
+            text-align: center; 
+            font-size: 1rem;             
+            color: white;             
+            max-width: 100%; /* Establece el ancho máximo del contenedor */
+            overflow: hidden; /* Oculta el texto que se desborda del contenedor */
+            text-overflow: ellipsis; /* Agrega puntos suspensivos (...) al texto desbordado */
+            white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */   
+                    
+        }
+        .contSubtitulos h3{
+        margin-top: 1rem;
+        } 
+    /*---------------------------------FIN CUADRICULA--------------------------------*/
+
+    /*--------------------------------------MAPA-------------------------------------*/
+    .mapa{
+        display: flex;  
+        margin: 2em auto;      
+        width: 30%;                         
+        box-shadow: 2px 0vw 10px 10px rgba(0, 0, 0, .5);       
+       
+    }  
+    /*-------------------------------------FIN MAPA----------------------------------*/
+
+     /*-----------------------------------FOOTER-------------------------------------*/
+     footer{  
+        position: relative;    
+        background-color: red;
+        height: 5rem;
+        color: white;
+        display: flex;    
+        justify-content: center;
+        align-items: center;      
+        gap: 0.5rem; 
+        margin-top: 2em;          
+        }
+        footer a{
+            display: flex;
+            color: white;
+           align-items: center;
+           text-decoration: none;       
+        }
+        footer img{
+            width: auto;
+            height: 2rem;
+            margin-left: 0.5rem;
+        }         
+    /*----------------------------------FIN FOOTER---------------------------------*/
+
+    /*---------------------------ESTILOS RESPONSIVE---------------------------------*/
+@media screen and (max-width:1440px){
+    
+    .listNav{        
+       gap: 2rem;           
+   }    
+   .listNav a{            
+       font-size: 1.5rem;
+   }
+}
+
+@media screen and (max-width:1024px){
+     header{
+       gap: 2rem;
+   }   
+   header h2{
+       font-size: 1.2rem;
+       }
+       .listNav a{
+           font-size: 1.2rem;
+       }
+       .listNav{        
+           gap: 1rem;           
+       }       
+}
+@media screen and (max-width:780px){    
+    header {
+        padding: 0.5rem;
+        gap: 3rem;  
+     }
+     header h2{
+     font-size: 1.5rem;
+     }
+     header img{           
+        width: auto;
+        height: 3rem;        
+     }
+    .abrir-menu{
+   display: block;       
+}
+.nav{      
+   display: flex;
+   position: absolute; 
+   flex-direction: column;          
+   top: 0rem;
+   right: 0rem;
+   bottom: 0rem;
+   left: 8rem;
+   background-color: red;    
+   box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+   padding: 1rem;   
+   display: none;
+   border-radius: 1rem;    
+   
+}
+.listNav{
+flex-direction: column;
+align-items: end;
+gap: 2rem;
+}
+.listNav a{    
+   color: white;
+   font-family: Sansita-Regular;
+   font-size: 1.3rem;
+}
+.listNav a:hover{   
+   font-size: 1.2rem;    
+  }     
+.cerrar-menu{       
+   display: block;   
+   margin-bottom: 1rem; 
+   position: relative;     
+}
+.nav.visible{
+   display: block;
+}
+
+.iconoQuienesSomos{
+   display: flex;       
+   left: 2rem;
+   bottom: 0.5rem;
+   flex-direction: column;
+   align-items: center;   
+}    
+.iconoQuienesSomos img{
+   width: 3rem;
+   height: 3rem;
+   border-radius: 50%;
+}
+.quienesSomos{
+color: white;
+font-size: 0.7rem;
+}
+.contenedorPrincipal {
+    width: 100%;
+}
+/*----------------------------------CUADRICULA---------------------------------------*/
+.containerCuadricula{
+      
+}
+.containerCuadricula ul{           
+    grid-template-columns:11em 11em; 
+    column-gap: 0.5em;      
+    }       
+/*----------------------------------CUADRICULA---------------------------------------*/
+.mapa{  
+   width: 95%;  
+} 
+footer{
+   height: 5rem;
+}
+}
+
