@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="{{ asset('css/estilosIndex.css') }}">      
+    <link rel="stylesheet" href="{{ url('css/estilosIndex.css') }}">      
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">   
     <link rel="icon" href="./imagenes/logo.png" type="image/png">
     
@@ -88,7 +88,7 @@
   <!-------------Aqui va todo el codigo javascript de la navBar-------------->  
  
 
-  <script src="{{ asset('js/scripts.js') }}">     
+  <script src="{{ url('js/scripts.js') }}">     
     </script>
  
  

@@ -62,7 +62,7 @@
         </form>       
     </div>  
        
-<script src="{{ asset('js/administracion.js') }}">
+<script src="{{ url('js/administracion.js') }}">
 </script>  
 
 <!-- estos scripts van despues de cargar el javascript no pueden ir antes porque no se ejecutan -->
